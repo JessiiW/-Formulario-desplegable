@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="estilos.css">
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script>
+			$(function(){
+		       $('#login').click(function(){
+			   $(this).next('#login-content').slideToggle();
+			   $(this).toggleClass('active');          
+			   });
+			});
+		</script>
+	</head>
+	<body>
+		<nav class="acceder">
+		   <ul>
+		      <li>
+		         <a id="login" href="#">Acceder</a>
+		         <div id="login-content">
+		            <form>
+						<input id="user" type="email" name="Email" placeholder="Usuario" required>   
+						<input id="pass" type="password" name="Password" placeholder="Pass" required>
+						<input type="submit" id="submit" value="Login">
+						<label><input type="checkbox" checked="checked">Recuerdame</label>
+			        </form>
+			     </div>                     
+		      </li>
+		   </ul>
+		</nav>
+	</body>
+</html>
